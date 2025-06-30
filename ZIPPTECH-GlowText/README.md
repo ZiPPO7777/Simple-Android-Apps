@@ -44,23 +44,38 @@ No frameworks. No backend. Just clean and responsive web magic.
 
 ---
 ## 📸 Screenshots
+
 ### 🔹 Glowing Text Preview 1
-![Preview 1](Screenshot/Preview1.png)
+<div align="center">
+  <img src="Screenshot/Preview1.png" width="300"/>
+</div>
 
 ### 🔹 Glowing Text Preview 2
-![Preview 3](Screenshot/Preview3.png)
+<div align="center">
+  <img src="Screenshot/Preview3.png" width="300"/>
+</div>
 
 ### 🔹 Glowing Text Preview 3
-![Preview 2](Screenshot/Preview2.png)
+<div align="center">
+  <img src="Screenshot/Preview2.png" width="300"/>
+</div>
 
 ### 🔹 Features Section
-![Features](Screenshot/Feature.png)
+<div align="center">
+  <img src="Screenshot/Feature.png" width="300"/>
+</div>
 
 ### 🔹 App Home
-![App Home](Screenshot/AppSS.png)
+<div align="center">
+  <img src="Screenshot/AppSS.png" width="300"/>
+</div>
 
 ### 🔹 Home with Theme
-![App Home 2](Screenshot/AppSS2.png)
+<div align="center">
+  <img src="Screenshot/AppSS2.png" width="300"/>
+</div>
+
+
 
 
 
