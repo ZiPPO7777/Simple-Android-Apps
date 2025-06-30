@@ -42,12 +42,32 @@ No frameworks. No backend. Just clean and responsive web magic.
 
 ---
 
-## 📸 Screenshots
-
-> (You can add screenshots here if you'd like. Example:)
-
-- `screenshots/homepage.png`
-- `screenshots/glow-preview.png`
-
 ---
+## 📸 Screenshots
+### 🔹 Glowing Text Preview 1
+![Preview 1](Screenshot/Preview1.png)
+
+### 🔹 Glowing Text Preview 2
+![Preview 3](Screenshot/Preview3.png)
+
+### 🔹 Glowing Text Preview 3
+![Preview 2](Screenshot/Preview2.png)
+
+### 🔹 Features Section
+![Features](Screenshot/Feature.png)
+
+### 🔹 App Home
+![App Home](Screenshot/AppSS.png)
+
+### 🔹 Home with Theme
+![App Home 2](Screenshot/AppSS2.png)
+
+
+
+
+
+
+
+
+
 
