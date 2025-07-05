@@ -4,7 +4,7 @@ Welcome to **ZIPPTECH's collection of simple Android applications**. This reposi
 
 ---
 
-## 📦 Projects Included
+## 📦 Projects Included 
 
 ### 🔤 Zipptech Dictionary  
 A lightweight web-based dictionary app built with HTML, CSS, and JavaScript.  
