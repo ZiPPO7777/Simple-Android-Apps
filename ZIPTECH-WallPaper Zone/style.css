@@ -1,0 +1,311 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Header with sticky category buttons */
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
+            padding: 15px 0;
+        }
+
+        .app-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Category navigation buttons */
+        .category-nav {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 0 20px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .category-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: fit-content;
+        }
+
+        .category-btn.active {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Main content area */
+        .main-content {
+            padding: 30px 20px;
+            min-height: 100vh;
+        }
+
+        /* Category sections - hidden by default */
+        .category-section {
+            display: none;
+        }
+
+        .category-section.active {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .category-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-align: center;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Responsive wallpaper grid */
+        .wallpaper-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 480px) {
+            .wallpaper-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .wallpaper-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                gap: 25px;
+            }
+        }
+
+        /* Individual wallpaper items */
+        .wallpaper-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            aspect-ratio: 9/16;
+        }
+
+        .wallpaper-item:active {
+            transform: scale(0.95);
+        }
+
+        .wallpaper-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Wallpaper overlay for better UX */
+        .wallpaper-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.7));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .wallpaper-item:active .wallpaper-overlay {
+            opacity: 1;
+        }
+
+        .preview-text {
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* Full-screen modal for wallpaper preview */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+        }
+
+        .modal.active {
+            display: flex;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-image {
+            max-width: 100%;
+            max-height: 80%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Modal control buttons */
+        .modal-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1001;
+        }
+
+        .modal-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .modal-btn:active {
+            background: rgba(255, 255, 255, 0.25);
+            transform: scale(0.9);
+        }
+
+        /* Download button at bottom of modal */
+        .download-controls {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1001;
+        }
+
+        .download-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .download-btn:active {
+            transform: scale(0.95);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Loading state */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 480px) {
+            .modal-controls {
+                top: 15px;
+                right: 15px;
+            }
+            
+            .modal-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 14px;
+            }
+            
+            .download-controls {
+                bottom: 20px;
+            }
+            
+            .download-btn {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+        }

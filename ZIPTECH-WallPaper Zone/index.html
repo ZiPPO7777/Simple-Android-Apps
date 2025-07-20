@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sticky Header with Category Navigation -->
+    <header class="header">
+        <h1 class="app-title">Wallpaper Gallery</h1>
+        <nav class="category-nav">
+            <button class="category-btn active" data-category="anime">Anime</button>
+            <button class="category-btn" data-category="cars">Cars</button>
+            <button class="category-btn" data-category="nature">Nature</button>
+            <button class="category-btn" data-category="modern">Modern</button>
+            <button class="category-btn" data-category="abstract">Abstract Art</button>
+            <button class="category-btn" data-category="minimal">Minimal</button>
+            <button class="category-btn" data-category="technology">Technology</button>
+            <button class="category-btn" data-category="space">Space</button>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        
+        <!-- ANIME CATEGORY SECTION -->
+        <section class="category-section active" data-category="anime">
+            <h2 class="category-title">Anime Wallpapers</h2>
+            <div class="wallpaper-grid">
+                <!-- Anime wallpaper images - easy to add more -->
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/anime/anime1.jpg', 'Anime Wallpaper 1')">
+                    <img src="assets/wallpapers/anime/anime1.jpg" alt="Anime Wallpaper 1" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+
+
+
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/anime/anime2.jpg', 'Anime Wallpaper 2')">
+                    <img src="assets/wallpapers/anime/anime2.jpg" alt="Anime Wallpaper 2" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+                
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/anime/anime3.jpg', 'Anime Wallpaper 2')">
+                    <img src="assets/wallpapers/anime/anime3.jpg" alt="Anime Wallpaper 2" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+               
+             
+                
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/anime/anime4.jpg', 'Anime Wallpaper 2')">
+                    <img src="assets/wallpapers/anime/anime3.jpg" alt="Anime Wallpaper 2" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+                
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/anime/anime5.jpg', 'Anime Wallpaper 2')">
+                    <img src="assets/wallpapers/anime/anime3.jpg" alt="Anime Wallpaper 2" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+
+                   <div class="wallpaper-item" onclick="openModal('assets/wallpapers/anime/anime5.jpg', 'Anime Wallpaper 2')">
+                    <img src="assets/wallpapers/anime/anime5.jpg" alt="Anime Wallpaper 2" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </section>
+
+        <!-- CARS CATEGORY SECTION -->
+        <section class="category-section" data-category="cars">
+            <h2 class="category-title">Car Wallpapers</h2>
+            <div class="wallpaper-grid">
+                <!-- Car wallpaper images - easy to add more -->
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/cars/cars1.jpg', 'Car Wallpaper 1')">
+                    <img src="assets/wallpapers/cars/cars1.jpg" alt="Car Wallpaper 1" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/cars/cars2.jpg', 'Car Wallpaper 2')">
+                    <img src="assets/wallpapers/cars/cars2.jpg" alt="Car Wallpaper 2" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NATURE CATEGORY SECTION -->
+        <section class="category-section" data-category="nature">
+            <h2 class="category-title">Nature Wallpapers</h2>
+            <div class="wallpaper-grid">
+                <!-- Nature wallpaper images - easy to add more -->
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/nature/nature1.jpg', 'Nature Wallpaper 1')">
+                    <img src="assets/wallpapers/nature/nature1.jpg" alt="Nature Wallpaper 1" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/nature/nature2.jpg', 'Nature Wallpaper 2')">
+                    <img src="assets/wallpapers/nature/nature2.jpg" alt="Nature Wallpaper 2" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODERN CATEGORY SECTION -->
+        <section class="category-section" data-category="modern">
+            <h2 class="category-title">Modern Wallpapers</h2>
+            <div class="wallpaper-grid">
+                <!-- Modern wallpaper images - easy to add more -->
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/modern/modern1.jpg', 'Modern Wallpaper 1')">
+                    <img src="assets/wallpapers/modern/modern1.jpg" alt="Modern Wallpaper 1" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/modern/modern2.jpg', 'Modern Wallpaper 2')">
+                    <img src="assets/wallpapers/modern/modern2.jpg" alt="Modern Wallpaper 2" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABSTRACT ART CATEGORY SECTION -->
+        <section class="category-section" data-category="abstract">
+            <h2 class="category-title">Abstract Art Wallpapers</h2>
+            <div class="wallpaper-grid">
+                <!-- Abstract wallpaper images - easy to add more -->
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/abstract/abstract1.jpg', 'Abstract Wallpaper 1')">
+                    <img src="assets/wallpapers/abstract/abstract1.jpg" alt="Abstract Wallpaper 1" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/abstract/abstract2.jpg', 'Abstract Wallpaper 2')">
+                    <img src="assets/wallpapers/abstract/abstract2.jpg" alt="Abstract Wallpaper 2" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MINIMAL CATEGORY SECTION -->
+        <section class="category-section" data-category="minimal">
+            <h2 class="category-title">Minimal Wallpapers</h2>
+            <div class="wallpaper-grid">
+                <!-- Minimal wallpaper images - easy to add more -->
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/minimal/minimal1.jpg', 'Minimal Wallpaper 1')">
+                    <img src="assets/wallpapers/minimal/minimal1.jpg" alt="Minimal Wallpaper 1" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/minimal/minimal2.jpg', 'Minimal Wallpaper 2')">
+                    <img src="assets/wallpapers/minimal/minimal2.jpg" alt="Minimal Wallpaper 2" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNOLOGY CATEGORY SECTION -->
+        <section class="category-section" data-category="technology">
+            <h2 class="category-title">Technology Wallpapers</h2>
+            <div class="wallpaper-grid">
+                <!-- Technology wallpaper images - easy to add more -->
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/technology/tech1.jpg', 'Technology Wallpaper 1')">
+                    <img src="assets/wallpapers/technology/tech1.jpg" alt="Technology Wallpaper 1" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/technology/tech2.jpg', 'Technology Wallpaper 2')">
+                    <img src="assets/wallpapers/technology/tech2.jpg" alt="Technology Wallpaper 2" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPACE CATEGORY SECTION -->
+        <section class="category-section" data-category="space">
+            <h2 class="category-title">Space Wallpapers</h2>
+            <div class="wallpaper-grid">
+                <!-- Space wallpaper images - easy to add more -->
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/space/space1.jpg', 'Space Wallpaper 1')">
+                    <img src="assets/wallpapers/space/space1.jpg" alt="Space Wallpaper 1" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+                <div class="wallpaper-item" onclick="openModal('assets/wallpapers/space/space2.jpg', 'Space Wallpaper 2')">
+                    <img src="assets/wallpapers/space/space2.jpg" alt="Space Wallpaper 2" loading="lazy">
+                    <div class="wallpaper-overlay">
+                        <div class="preview-text">Tap to preview</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Full-screen Modal for wallpaper preview -->
+    <div class="modal" id="wallpaperModal">
+        <div class="modal-content">
+            <!-- Exit button (top-right) -->
+            <div class="modal-controls">
+                <button class="modal-btn" id="closeModal" title="Close">
+                    ✕
+                </button>
+            </div>
+            
+            <!-- Wallpaper preview image -->
+            <img class="modal-image" id="modalImage" src="" alt="Wallpaper Preview">
+            
+            <!-- Download button (bottom center) -->
+            <div class="download-controls">
+                <button class="download-btn" id="downloadBtn">
+                    📥 Download Wallpaper
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="app.js"></script>
+</html>
